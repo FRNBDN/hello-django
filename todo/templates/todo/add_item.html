@@ -8,7 +8,8 @@
   </head>
   <body>
     <h1>Add a Todo Item:</h1>
-    <form action="add" method="POST">
+    <form action="{% url 'add' %}" method="POST">
+      {% csrf_token %}
       <div>
         <p>
           <label for="id_name">Name: </label>
@@ -18,7 +19,7 @@
       <div>
         <p>
           <label for="id_done">Done: </label>
-          <input type="checkbox" id="id_done" , name="item_done" />
+          <input type="checkbox" id="id_done" , name="done" />
         </p>
       </div>
       <div>
