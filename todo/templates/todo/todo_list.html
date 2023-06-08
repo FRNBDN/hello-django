@@ -17,6 +17,11 @@
         <td>{{item.name}}</td>
         {% endif %}
         <td>
+          <a href="{% url 'toggle' item_id=item.id %}"
+            ><button>Toggle</button></a
+          >
+        </td>
+        <td>
           <a href="{% url 'edit' item_id=item.id %}"><button>Edit</button></a>
         </td>
         <td>
