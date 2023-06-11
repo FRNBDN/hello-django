@@ -34,7 +34,7 @@ DEBUG = DEVELOPMENT
 if DEVELOPMENT:
     ALLOWED_HOSTS = ['127.0.0.1']
 else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+    ALLOWED_HOSTS = ['https://djng-todo-app.herokuapp.com/']
 
 
 # Application definition
